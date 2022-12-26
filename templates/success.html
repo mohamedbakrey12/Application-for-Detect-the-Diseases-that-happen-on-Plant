@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "second-main">
+            <nav>
+                <ul style = "padding-right: 2%;" class = "main-nav">
+                    <li><a href ="/">HomePage</a></li>                
+                </ul>
+               
+            </nav>
+            <div class = "header">
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class="header-text">Uploaded Image</h3>
+                </row>
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
+                </row>
+            </div>
+
+            <div class = "info">
+            
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class = "header-text">Model Prediction</h3>
+                </row>
+                <row style = "width: 100%; display: flex; justify-content: center;">
+                 
+                    <table class="table-bordered text-light table-custom">
+                        
+                      <tr>
+                            <th>Rank</th>
+                            <th>Class</th>
+                            <th>Probability</th>
+                        </tr>
+
+                        <tr>
+                            <td>1st</td>
+                            <td>{{ predictions.class1 }}</td>
+                            <td>{{ predictions.prob1 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>2nd</td>
+                            <td>{{ predictions.class2 }}</td>                                                         
+                            <td>{{ predictions.prob2 }} %</td>                                                      
+                        </tr>                                                                                                               
+                       
+                        <tr>
+                            <td>3st</td>
+                            <td>{{ predictions.class3 }}</td>
+                            <td>{{ predictions.prob3 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>4st</td>
+                            <td>{{ predictions.class4 }}</td>
+                            <td>{{ predictions.prob4 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>5st</td>
+                            <td>{{ predictions.class5 }}</td>
+                            <td>{{ predictions.prob5 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>6st</td>
+                            <td>{{ predictions.class6 }}</td>
+                            <td>{{ predictions.prob6 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>7st</td>
+                            <td>{{ predictions.class7 }}</td>
+                            <td>{{ predictions.prob7 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>8st</td>
+                            <td>{{ predictions.class8 }}</td>
+                            <td>{{ predictions.prob8 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>9st</td>
+                            <td>{{ predictions.class9 }}</td>
+                            <td>{{ predictions.prob9 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>10st</td>
+                            <td>{{ predictions.class10 }}</td>
+                            <td>{{ predictions.prob10}} %</td>
+                          </tr>
+
+
+
+                          <tr>
+                            <td>11st</td>
+                            <td>{{ predictions.class11 }}</td>
+                            <td>{{ predictions.prob11 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>12st</td>
+                            <td>{{ predictions.class12 }}</td>
+                            <td>{{ predictions.prob12 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>13st</td>
+                            <td>{{ predictions.class13 }}</td>
+                            <td>{{ predictions.prob13 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>14st</td>
+                            <td>{{ predictions.class14 }}</td>
+                            <td>{{ predictions.prob14 }} %</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>15st</td>
+                            <td>{{ predictions.class15 }}</td>
+                            <td>{{ predictions.prob15 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>16st</td>
+                            <td>{{ predictions.class16 }}</td>
+                            <td>{{ predictions.prob16 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>17st</td>
+                            <td>{{ predictions.class17 }}</td>
+                            <td>{{ predictions.prob17}} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>18st</td>
+                            <td>{{ predictions.class18 }}</td>
+                            <td>{{ predictions.prob18 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>19st</td>
+                            <td>{{ predictions.class19 }}</td>
+                            <td>{{ predictions.prob19 }} %</td>
+                          </tr>
+
+                          <tr>
+                            <td>20st</td>
+                            <td>{{ predictions.class20 }}</td>
+                            <td>{{ predictions.prob20 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>21st</td>
+                            <td>{{ predictions.class21 }}</td>
+                            <td>{{ predictions.prob21 }} %</td>
+                          </tr>
+
+
+                          <tr>
+                          <td>22st</td>
+                            <td>{{ predictions.class22 }}</td>
+                            <td>{{ predictions.prob22 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>23st</td>
+                            <td>{{ predictions.class23 }}</td>
+                            <td>{{ predictions.prob23 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>24st</td>
+                            <td>{{ predictions.class24 }}</td>
+                            <td>{{ predictions.prob24 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>25st</td>
+                            <td>{{ predictions.class25 }}</td>
+                            <td>{{ predictions.prob25 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>26st</td>
+                            <td>{{ predictions.class26 }}</td>
+                            <td>{{ predictions.prob26 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>27st</td>
+                            <td>{{ predictions.class27 }}</td>
+                            <td>{{ predictions.prob27}} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>28st</td>
+                            <td>{{ predictions.class28 }}</td>
+                            <td>{{ predictions.prob28 }} %</td>
+                          </tr>
+                          
+                          <tr>
+                          <td>29st</td>
+                            <td>{{ predictions.class29 }}</td>
+                            <td>{{ predictions.prob29 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>30st</td>
+                            <td>{{ predictions.class30 }}</td>
+                            <td>{{ predictions.prob30 }} %</td>
+                          </tr>
+
+
+                          <tr>
+                          <td>31st</td>
+                            <td>{{ predictions.class31 }}</td>
+                            <td>{{ predictions.prob31 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>32st</td>
+                            <td>{{ predictions.class32 }}</td>
+                            <td>{{ predictions.prob32 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>33st</td>
+                            <td>{{ predictions.class33 }}</td>
+                            <td>{{ predictions.prob33 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>34st</td>
+                            <td>{{ predictions.class34 }}</td>
+                            <td>{{ predictions.prob34 }} %</td>
+                          </tr>
+
+
+                          <tr>
+                          <td>35st</td>
+                            <td>{{ predictions.class35 }}</td>
+                            <td>{{ predictions.prob35 }} %</td>
+                          </tr>
+
+
+                          <tr>
+                          <td>36st</td>
+                            <td>{{ predictions.class36 }}</td>
+                            <td>{{ predictions.prob36 }} %</td>
+                          </tr>
+
+                          <tr>
+                          <td>37st</td>
+                            <td>{{ predictions.class37 }}</td>
+                            <td>{{ predictions.prob37 }} %</td>
+                          </tr>
+
+                          <tr>
+                         <td>38st</td>
+                            <td>{{ predictions.class38 }}</td>
+                            <td>{{ predictions.prob38 }} %</td>
+                          </tr>
+
+                        
+
+
+                    </table>
+                </row>
+        
+            </div>
+            <h3>This is Classification for the Plant.</h3>
+        </div>
+       
+    </body>
+</html>
